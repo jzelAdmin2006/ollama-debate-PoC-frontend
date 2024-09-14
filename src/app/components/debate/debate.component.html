@@ -14,6 +14,7 @@
 
 <div *ngIf="debateResponses.length">
   <div *ngFor="let response of debateResponses" class="response">
-    <p>{{ response.debater }}: {{ response.response }}</p>
+    <span class="debater-name">{{ response.debater }}</span>
+    <p class="debate-text">{{ response.response }}</p>
   </div>
 </div>

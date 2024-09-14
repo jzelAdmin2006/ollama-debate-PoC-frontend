@@ -21,6 +21,7 @@ export class DebateComponent {
 
   submitDebate(): void {
     this.loading = true;
+    this.debateResponses = [];
     this.debateService.startDebate(this.input, this.exchanges).subscribe({
       next: (responses) => {
         this.debateResponses = responses;

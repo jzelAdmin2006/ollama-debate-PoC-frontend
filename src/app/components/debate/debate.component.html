@@ -15,6 +15,9 @@
 <div *ngIf="debateResponses.length">
   <div *ngFor="let response of debateResponses" class="response">
     <span class="debater-name">{{ response.debater }}</span>
-    <p class="debate-text">{{ response.response }}</p>
+    <div
+      [innerHTML]="response.response | markdown | async"
+      class="debate-text"
+    ></div>
   </div>
 </div>

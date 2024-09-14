@@ -1,12 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NgForOf, NgIf } from '@angular/common';
+import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
 import { DebateService } from '../../services/debate.service';
+import { MarkdownPipe } from '../../pipes/markdown.pipe';
 
 @Component({
   selector: 'app-debate',
   standalone: true,
-  imports: [FormsModule, NgForOf, NgIf],
+  imports: [FormsModule, NgForOf, NgIf, MarkdownPipe, AsyncPipe],
   templateUrl: './debate.component.html',
   styleUrl: './debate.component.scss',
 })

@@ -1,14 +1,24 @@
-<div class="debate-form">
+<form (ngSubmit)="submitDebate()">
   <div style="display: flex; align-items: center">
     <span>topic / question:</span>
-    <input [(ngModel)]="input" placeholder='e.g., "abortion"' type="text" />
+    <input
+      [(ngModel)]="input"
+      name="input"
+      placeholder='e.g., "abortion"'
+      type="text"
+    />
   </div>
   <div style="display: flex; align-items: center">
     <span>number of exchanges:</span>
-    <input [(ngModel)]="exchanges" placeholder="e.g., 2" type="number" />
+    <input
+      [(ngModel)]="exchanges"
+      name="exchanges"
+      placeholder="e.g., 2"
+      type="number"
+    />
   </div>
-  <button (click)="submitDebate()">Start Debate</button>
-</div>
+  <button type="submit">Start Debate</button>
+</form>
 
 <div *ngIf="debateResponses.length">
   <div *ngFor="let response of debateResponses" class="response">

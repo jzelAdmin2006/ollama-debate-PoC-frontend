@@ -15,12 +15,17 @@ export class DebateComponent {
   input: string = '';
   exchanges: number = 2;
   debateResponses: any[] = [];
+  loading = false;
 
   private readonly debateService = inject(DebateService);
 
   submitDebate(): void {
+    this.loading = true;
     this.debateService.startDebate(this.input, this.exchanges).subscribe({
-      next: (responses) => (this.debateResponses = responses),
+      next: (responses) => {
+        this.debateResponses = responses;
+        this.loading = false;
+      },
       error: (error) => console.error('There was an error!', error),
     });
   }

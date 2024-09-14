@@ -3,6 +3,7 @@
     <span>topic / question:</span>
     <input
       [(ngModel)]="input"
+      [disabled]="loading"
       name="input"
       placeholder='e.g., "abortion"'
       type="text"
@@ -12,12 +13,14 @@
     <span>number of exchanges:</span>
     <input
       [(ngModel)]="exchanges"
+      [disabled]="loading"
       name="exchanges"
       placeholder="e.g., 2"
       type="number"
     />
   </div>
-  <button type="submit">Start Debate</button>
+  <button [disabled]="loading" type="submit">Start Debate</button>
+  <div *ngIf="loading" class="loader"></div>
 </form>
 
 <div *ngIf="debateResponses.length">

@@ -32,7 +32,22 @@
     }"
     class="response"
   >
-    <span class="debater-name">{{ response.debater }}</span>
+    <span class="debater-name">
+      <img
+        *ngIf="response.debater === 'conservative'"
+        alt="Conservative"
+        height="88"
+        ngSrc="assets/images/republican.svg"
+        width="100"
+      />
+      <img
+        *ngIf="response.debater === 'liberal'"
+        alt="Liberal"
+        height="100"
+        ngSrc="assets/images/democratic.svg"
+        width="100"
+      />
+    </span>
     <div
       [innerHTML]="response.response | markdown | async"
       class="debate-text"

@@ -1,14 +1,12 @@
 <div class="debate-form">
-  <input
-    [(ngModel)]="input"
-    placeholder="Enter your debate topic"
-    type="text"
-  />
-  <input
-    [(ngModel)]="exchanges"
-    placeholder="Number of exchanges"
-    type="number"
-  />
+  <div style="display: flex; align-items: center">
+    <span>topic / question:</span>
+    <input [(ngModel)]="input" placeholder='e.g., "abortion"' type="text" />
+  </div>
+  <div style="display: flex; align-items: center">
+    <span>number of exchanges:</span>
+    <input [(ngModel)]="exchanges" placeholder="e.g., 2" type="number" />
+  </div>
   <button (click)="submitDebate()">Start Debate</button>
 </div>
 

@@ -10,6 +10,15 @@
     padding: 8px;
     width: 300px;
   }
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    margin-right: 5px;
+  }
 }
 
 .response {

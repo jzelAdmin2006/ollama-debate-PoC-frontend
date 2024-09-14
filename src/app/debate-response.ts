@@ -1,4 +1,4 @@
 export interface DebateResponse {
-  debater: string;
+  debater: 'conservative' | 'liberal';
   response: string;
 }

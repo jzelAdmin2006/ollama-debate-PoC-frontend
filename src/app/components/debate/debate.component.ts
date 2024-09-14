@@ -28,10 +28,9 @@ import { DebateResponse } from '../../debate-response';
 })
 export class DebateComponent {
   input: string = '';
-  exchanges: number = 2;
   debateResponses: DebateResponse[] = [];
   loading = false;
-
+  exchanges: number = 2;
   private readonly debateService = inject(DebateService);
 
   submitDebate(): void {
@@ -44,5 +43,9 @@ export class DebateComponent {
       },
       error: (error) => console.error('There was an error!', error),
     });
+  }
+
+  validateExchanges() {
+    this.exchanges = Math.max(1, this.exchanges);
   }
 }

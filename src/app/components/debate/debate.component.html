@@ -12,8 +12,10 @@
   <div style="display: flex; align-items: center">
     <span>number of exchanges:</span>
     <input
+      (change)="validateExchanges()"
       [(ngModel)]="exchanges"
       [disabled]="loading"
+      min="1"
       name="exchanges"
       placeholder="e.g., 2"
       type="number"

@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
 import { DebateService } from '../../services/debate.service';
 import { MarkdownPipe } from '../../pipes/markdown.pipe';
+import { DebateResponse } from '../../debate-response';
 
 @Component({
   selector: 'app-debate',
@@ -14,7 +15,7 @@ import { MarkdownPipe } from '../../pipes/markdown.pipe';
 export class DebateComponent {
   input: string = '';
   exchanges: number = 2;
-  debateResponses: any[] = [];
+  debateResponses: DebateResponse[] = [];
   loading = false;
 
   private readonly debateService = inject(DebateService);

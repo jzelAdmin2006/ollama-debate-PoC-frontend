@@ -24,7 +24,14 @@
 </form>
 
 <div *ngIf="debateResponses.length">
-  <div *ngFor="let response of debateResponses" class="response">
+  <div
+    *ngFor="let response of debateResponses"
+    [ngClass]="{
+      'conservative-response': response.debater === 'conservative',
+      'liberal-response': response.debater === 'liberal',
+    }"
+    class="response"
+  >
     <span class="debater-name">{{ response.debater }}</span>
     <div
       [innerHTML]="response.response | markdown | async"

@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
+import { AsyncPipe, NgClass, NgForOf, NgIf } from '@angular/common';
 import { DebateService } from '../../services/debate.service';
 import { MarkdownPipe } from '../../pipes/markdown.pipe';
 import { DebateResponse } from '../../debate-response';
@@ -8,7 +8,7 @@ import { DebateResponse } from '../../debate-response';
 @Component({
   selector: 'app-debate',
   standalone: true,
-  imports: [FormsModule, NgForOf, NgIf, MarkdownPipe, AsyncPipe],
+  imports: [FormsModule, NgForOf, NgIf, MarkdownPipe, AsyncPipe, NgClass],
   templateUrl: './debate.component.html',
   styleUrl: './debate.component.scss',
 })

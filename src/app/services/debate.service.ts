@@ -11,8 +11,9 @@ export class DebateService {
   private readonly http = inject(HttpClient);
 
   startDebate(input: string, exchanges: number): Observable<DebateResponse[]> {
-    return this.http.post<DebateResponse[]>(`${this.apiUrl}/${exchanges}`, {
+    return this.http.post<DebateResponse[]>(
+      `${this.apiUrl}/${exchanges}`,
       input,
-    });
+    );
   }
 }

@@ -1,6 +1,8 @@
-# Ollama Debate Tool
+# Ollama Debate Tool PoC Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+This is a simple frontend for the [Ollama Debate Tool PoC](https://github.com/jzelAdmin2006/ollama-debate-PoC) I've created for my in-depth general eduction project.
+
+This project was initially generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
 ## Development server
 

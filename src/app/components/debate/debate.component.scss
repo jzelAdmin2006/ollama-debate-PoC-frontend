@@ -74,3 +74,41 @@ form {
 .liberal-response {
   background-color: #d6e6ff;
 }
+
+@media (max-width: 1200px) {
+  #app-logo-large {
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    img {
+      width: 70%;
+      height: auto;
+    }
+  }
+
+  form {
+    span {
+      font-size: 150%;
+    }
+
+    div {
+      flex-direction: column;
+
+      input {
+        margin-bottom: 20%;
+        width: 90%;
+        font-size: 130%;
+      }
+    }
+
+    button {
+      font-size: 175%;
+    }
+  }
+
+  .response,
+  .debater-model {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

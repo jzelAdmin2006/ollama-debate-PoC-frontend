@@ -30,7 +30,9 @@
       type="number"
     />
   </div>
-  <button [disabled]="loading" type="submit">start debate</button>
+  <button [disabled]="loading || input === ''" type="submit">
+    start debate
+  </button>
   <div *ngIf="loading" class="loader"></div>
 </form>
 

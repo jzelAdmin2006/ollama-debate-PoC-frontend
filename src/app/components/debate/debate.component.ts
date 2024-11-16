@@ -46,6 +46,6 @@ export class DebateComponent {
   }
 
   validateExchanges() {
-    this.exchanges = Math.max(1, this.exchanges);
+    this.exchanges = Math.min(Math.max(this.exchanges, 1), 5);
   }
 }
